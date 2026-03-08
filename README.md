@@ -16,22 +16,26 @@ A Discord bot that responds with witty comebacks when mentioned. Built with .NET
 ## Setup
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/yourusername/TalkbackDiscordBot.git
+   git clone https://github.com/deltap4oenix/TalkbackDiscordBot.git
    cd TalkbackDiscordBot
    ```
 
 2. Set your Discord bot token as an environment variable:
+
    ```bash
    export DISCORD_BOT_TOKEN="your-bot-token-here"
    ```
 
 3. Build the project:
+
    ```bash
    dotnet build
    ```
 
 4. Run the bot:
+
    ```bash
    dotnet run
    ```
