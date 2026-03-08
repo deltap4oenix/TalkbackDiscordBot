@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Doney Peters\\source\\repos\\DiscordSmackTalkingBot\\DiscordSmackTalkingBot.csproj": {}
+    "/home/doney/git/TalkbackDiscordBot/DiscordSmackTalkingBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Doney Peters\\source\\repos\\DiscordSmackTalkingBot\\DiscordSmackTalkingBot.csproj": {
+    "/home/doney/git/TalkbackDiscordBot/DiscordSmackTalkingBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Doney Peters\\source\\repos\\DiscordSmackTalkingBot\\DiscordSmackTalkingBot.csproj",
+        "projectUniqueName": "/home/doney/git/TalkbackDiscordBot/DiscordSmackTalkingBot.csproj",
         "projectName": "DiscordSmackTalkingBot",
-        "projectPath": "C:\\Users\\Doney Peters\\source\\repos\\DiscordSmackTalkingBot\\DiscordSmackTalkingBot.csproj",
-        "packagesPath": "C:\\Users\\Doney Peters\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Doney Peters\\source\\repos\\DiscordSmackTalkingBot\\obj\\",
+        "projectPath": "/home/doney/git/TalkbackDiscordBot/DiscordSmackTalkingBot.csproj",
+        "packagesPath": "/home/doney/.nuget/packages/",
+        "outputPath": "/home/doney/git/TalkbackDiscordBot/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Doney Peters\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/doney/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -51,16 +55,31 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }
