@@ -9,7 +9,6 @@ namespace DiscordSmackTalkingBot
     {
         private readonly DiscordSocketClient client;
         private readonly SmackTalkService smackTalkService;
-        private const string token = "850ead54a3799c07ce23ed49d72bd64295aba032e61b9d3715fc91287e7572a0";
 
         public Program()
         {
@@ -20,6 +19,9 @@ namespace DiscordSmackTalkingBot
 
         public async Task StartBotAsync()
         {
+            var token = Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN")
+                ?? throw new InvalidOperationException("DISCORD_BOT_TOKEN environment variable is not set.");
+
             await this.client.LoginAsync(Discord.TokenType.Bot, token);
             await this.client.StartAsync();
             await Task.Delay(-1);

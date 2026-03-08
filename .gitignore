@@ -1,0 +1,63 @@
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.docuser
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+**/packages/*
+project.lock.json
+project.fragment.lock.json
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+
+# NCrunch
+*.ncrunch*
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# Publish output
+publish/
+
+# Logs
+*.log
+
+# Local configuration (keep your bot token safe!)
+appsettings.local.json
+.env
