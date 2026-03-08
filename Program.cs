@@ -37,8 +37,10 @@ namespace DiscordSmackTalkingBot
         {
             if (message.Author.IsBot)
                 return;
-
-            await ReplyAsync(message, smackTalkService.GetRandomSmackTalk());
+            if (message.MentionedUsers.Any(u => u.Id == client.CurrentUser.Id))
+            {
+              await ReplyAsync(message, smackTalkService.GetRandomSmackTalk());
+            }
         }
 
         private async Task ReplyAsync(SocketMessage message, string response) =>
