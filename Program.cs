@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.NetworkInformation;
+using System.Reactive.Subjects;
 using Discord.WebSocket;
 
 namespace DiscordSmackTalkingBot
@@ -22,26 +24,32 @@ namespace DiscordSmackTalkingBot
             var token = Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN")
                 ?? throw new InvalidOperationException("DISCORD_BOT_TOKEN environment variable is not set.");
 
+            this.client.Log += LogFuncAsync;
             await this.client.LoginAsync(Discord.TokenType.Bot, token);
             await this.client.StartAsync();
             await Task.Delay(-1);
+
+            async Task LogFuncAsync(Discord.LogMessage message) =>
+              Console.Write(message.ToString());
         }
 
         private async Task MessageHandler(SocketMessage message)
         {
             if (message.Author.IsBot)
                 return;
-
             if (message.MentionedUsers.Any(u => u.Id == client.CurrentUser.Id))
             {
-                await message.Channel.SendMessageAsync(smackTalkService.GetRandomSmackTalk());
+              await ReplyAsync(message, smackTalkService.GetRandomSmackTalk());
             }
         }
 
-        static async Task Main(string[] args)
+        private async Task ReplyAsync(SocketMessage message, string response) =>
+          await message.Channel.SendMessageAsync(response);
+
+        static void Main(string[] args)
         {
             Console.WriteLine("Starting Smack Talk Bot...");
-            await new Program().StartBotAsync();
+            new Program().StartBotAsync().GetAwaiter().GetResult();
         }
     }
 }
